@@ -135,7 +135,7 @@
         <Button
             android:id="@+id/HuyBo"
             android:backgroundTint="#F34336"
-            android:text="Hủy bỏ"
+            android:text="Hủy bỏ "
             android:layout_width="160dp"
             android:layout_height="wrap_content"/>
     </LinearLayout>
