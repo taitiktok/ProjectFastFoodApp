@@ -33,7 +33,6 @@
             android:layout_width="0dp"
             android:text="Tên món ăn"
             android:layout_height="wrap_content"/>
-
         <EditText
             android:id="@+id/txtTenMonAn"
             android:layout_width="0dp"
@@ -90,7 +89,7 @@
             android:gravity="center"
             android:layout_weight="1"
             android:layout_width="0dp"
-            android:text="Mô tả chi tiết"
+            android:text="Mô tả  chi tiết"
             android:layout_height="wrap_content"/>
 
         <EditText
