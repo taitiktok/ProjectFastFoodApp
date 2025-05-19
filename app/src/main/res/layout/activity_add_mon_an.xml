@@ -19,7 +19,7 @@
         android:src="@drawable/chicken_14449982"
         android:layout_gravity="center"
         android:layout_marginTop="20sp"
-        android:id="@+id/imageMonAn1"
+        android:id="@+id/imageMonAn"
         android:layout_width="70dp"
         android:layout_height="70dp"/>
     <LinearLayout
@@ -95,7 +95,6 @@
 
         <EditText
             android:scrollbars="vertical"
-
             android:id="@+id/txtMoTaChiTiet"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
