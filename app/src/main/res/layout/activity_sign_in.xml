@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:background="#ffff"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Views.Account.SignIn">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:gravity="center">
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lottie_view"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            app:lottie_rawRes="@raw/c"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true" />
+    </LinearLayout>
+
+    <!-- CardView chứa form đăng nhập -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="360dp"
+        android:layout_height="480dp"
+        android:layout_margin="20dp"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="6dp">
+        <LinearLayout
+            android:background="#ffff"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="500dp"
+            android:padding="15dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:gravity="center"
+                android:text="Create new account"
+                android:textColor="#F34336"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+            <EditText
+                android:textColor="@color/black"
+                android:id="@+id/txtUserAdmin"
+                android:layout_width="320dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="40dp"
+                android:hint="Username"
+                android:inputType="textEmailAddress"
+                android:drawableEnd="@drawable/admin"
+                android:background="@drawable/brg_signup"
+                android:paddingStart="20dp"
+                android:paddingEnd="10dp" />
+
+            <EditText
+                android:textColor="@color/black"
+                android:id="@+id/txtPassWordAdmin"
+                android:layout_width="320dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="40dp"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:drawableEnd="@drawable/baseline_key1_24"
+                android:background="@drawable/brg_signup"
+                android:paddingStart="20dp"
+                android:paddingEnd="10dp" />
+            <EditText
+                android:textColor="@color/black"
+                android:id="@+id/txtPassWordAdmin1"
+                android:layout_width="320dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="50dp"
+                android:hint="Cofirm Password"
+                android:inputType="textPassword"
+                android:drawableEnd="@drawable/baseline_download_done_24"
+                android:background="@drawable/brg_signup"
+                android:paddingStart="20dp"
+                android:paddingEnd="10dp" />
+            <Button
+                android:id="@+id/buttonSignUP"
+                android:layout_width="280dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                android:backgroundTint="#F34336"
+                android:text="SIGN UP"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:gravity="center"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Already have an acount ? "
+                    android:textColor="#9E9E9E"
+                    android:textSize="14sp" />
+                <TextView
+                    android:id="@+id/login"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Login "
+                    android:textColor="#3949AB"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

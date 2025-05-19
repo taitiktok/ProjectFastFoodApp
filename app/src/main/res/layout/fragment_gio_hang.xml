@@ -1,0 +1,57 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="93dp"
+    android:background="#5FFBEFD9"
+    tools:context=".Views.GioHang.GioHang">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarGioHang"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycleViewGioHang"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+    <LinearLayout
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:gravity="center_vertical">
+        <TextView
+            android:textColor="#3949AB"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="10dp"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:text="Tổng tiền:"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/tvTongTien"
+            android:textColor="@color/design_default_color_error"
+            android:text="280.000"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:textColor="@color/design_default_color_error"
+            android:text="VND"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/tvButtonThanhToan"
+            android:padding="8dp"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:background="@drawable/thanhtoan"
+            android:text="Thanh toán"
+            android:layout_marginStart="30dp"
+            android:layout_width="100dp"
+            android:layout_height="45dp" />
+    </LinearLayout>
+</LinearLayout>

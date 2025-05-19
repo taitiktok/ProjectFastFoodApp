@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.FastFoodStore"
+        tools:targetApi="31">
+        <activity
+            android:name=".ViewModels.FlashScreen"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Views.ThongKe.ThongKeDoanhThu2"
+            android:exported="true"/>
+        <activity
+            android:name=".Views.ThongKe.ThongKeDoanhThu"
+            android:exported="true"/>
+        <activity
+            android:name=".Views.Account.SignIn"
+            android:exported="false" />
+        <activity
+            android:name=".Views.Account.Login"
+            android:exported="true">
+
+        </activity>
+        <activity
+            android:name=".Views.MonAnInTrangChu.XemChiTietMonAn1"
+            android:exported="false" />
+        <activity
+            android:name=".Views.MonAnInTrangChu.MonAnFromTrangChu"
+            android:exported="false" />
+        <activity
+            android:name=".Views.TrangChu.TrangChu"
+            android:exported="true" />
+        <activity
+            android:name=".Views.DanhMuc.Edit_Nhom_Mon"
+            android:exported="false" />
+        <activity
+            android:name=".Views.DanhMuc.add_nhom_mon1"
+            android:exported="false" />
+        <activity
+            android:name=".Views.MonAn.edit_mon_an"
+            android:exported="false" />
+        <activity
+            android:name=".Views.MonAn.AddMonAn"
+            android:exported="false" />
+        <activity
+            android:name=".Views.MonAn.QuanLyMonAn"
+            android:exported="false" />
+        <activity
+            android:name=".Views.DanhMuc.QuanLyDanhMuc"
+            android:exported="false" />
+        <activity
+            android:name=".Views.NhanVien.EditNhanVien"
+            android:exported="false" />
+        <activity
+            android:name=".Views.NhanVien.AddNhanVien"
+            android:exported="false" />
+        <activity
+            android:name=".Views.NhanVien.QuanLyNhanVien"
+            android:exported="false" />
+        <activity
+            android:name=".Views.Main.MainActivity"
+            android:exported="true" />
+    </application>
+
+</manifest>

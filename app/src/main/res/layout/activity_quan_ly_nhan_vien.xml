@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Views.NhanVien.QuanLyNhanVien">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarQuanLyNhanVien"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#039BE5"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:titleTextColor="@android:color/white" />
+
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:singleLine="true"
+            android:inputType="text"
+            android:imeOptions="actionSearch"
+            android:paddingLeft="10dp"
+            android:drawableStart="@drawable/baseline_search_24"
+            android:id="@+id/txtSearch"
+            android:background="@drawable/search_text_box"
+            android:hint="Nhập mã nhân viên cần tìm"
+            android:layout_width="280sp"
+            android:layout_height="50dp"/>
+        <ImageView
+            android:id="@+id/add"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/add"
+            android:layout_width="30dp"
+            android:layout_height="30dp"/>
+        <ImageView
+            android:layout_marginLeft="10sp"
+            android:src="@drawable/reload"
+            android:layout_width="30dp"
+            android:layout_height="30dp"/>
+    </LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycleViewQlnv"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</LinearLayout>

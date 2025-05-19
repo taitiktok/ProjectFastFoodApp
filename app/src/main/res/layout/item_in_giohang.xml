@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+   android:padding="10sp"
+    android:background="@drawable/boderingiohang"
+    android:orientation="horizontal">
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_gravity="center"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/imageInGioHang"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:src="@drawable/image1"
+        app:civ_border_width="2dp"
+        android:layout_marginLeft="20sp"
+        app:civ_border_color="#A6E53935"/>
+    <LinearLayout
+        android:layout_marginLeft="30dp"
+        android:gravity="center"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:textColor="@color/nav_selected"
+            android:textSize="19sp"
+            android:id="@+id/nameMonAnInGioHang"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gà rang muối" />
+        <LinearLayout
+            android:layout_marginTop="2dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:textSize="15dp"
+                android:textColor="@color/design_default_color_error"
+                android:id="@+id/giaMonAnInGioHang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="56.000" />
+            <TextView
+                android:layout_marginLeft="5dp"
+                android:textSize="15dp"
+                android:textColor="@color/design_default_color_error"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="VND" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/buttonAddInGioHang"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/boderbutton"
+                android:gravity="center"
+                android:text="+"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/soLuongMonAnInGioHang"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:textSize="20sp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/boderbutton"
+                android:gravity="center"
+                android:text="10"
+                />
+            <TextView
+                android:id="@+id/buttonTruInGipHang"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/boderbutton"
+                android:gravity="center"
+                android:text="-"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+    <TextView
+        android:id="@+id/buttonXoaInGioHang"
+        android:layout_marginLeft="30sp"
+        android:layout_gravity="center"
+        android:textColor="@color/white"
+        android:background="@color/design_default_color_error"
+        android:gravity="center"
+        android:text="Xóa"
+        android:layout_width="50dp"
+        android:layout_height="30dp"/>
+</LinearLayout>

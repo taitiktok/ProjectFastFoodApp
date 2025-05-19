@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Views.MonAn.edit_mon_an">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarAddMonAn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#039BE5"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:titleTextColor="@color/white" />
+
+
+    <ImageView
+        android:src="@drawable/add_mon_an"
+        android:layout_gravity="center"
+        android:layout_marginTop="20sp"
+        android:id="@+id/imageMonAn"
+        android:layout_width="70dp"
+        android:layout_height="70dp"/>
+    <LinearLayout
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="30sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:text="Mã món ăn :"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:textStyle="bold"
+            android:layout_height="35dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginLeft="20dp"
+            android:id="@+id/idMonEdit"
+            android:text="001"
+            android:layout_width="254dp"
+       />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:text="Tên món ăn"
+            android:layout_height="wrap_content"/>
+        <EditText
+            android:layout_height="35dp"
+            android:layout_marginRight="30dp"
+            android:id="@+id/txtTenMonAn"
+            android:layout_weight="2"
+            android:layout_width="0dp"
+         />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:text="Giá tiền"
+            android:layout_height="wrap_content"/>
+        <EditText
+            android:inputType="number"
+            android:layout_height="35dp"
+            android:layout_marginRight="30dp"
+            android:id="@+id/txtGiaTien"
+            android:layout_weight="2"
+            android:layout_width="0dp"
+          />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_marginLeft="30sp"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:text="Nhóm món"
+            android:layout_height="wrap_content"/>
+
+        <Spinner
+            android:id="@+id/spinnerNhomMon"
+            android:layout_width="250dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="35dp" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:text="Mô tả chi tiết"
+            android:layout_height="wrap_content"/>
+        <EditText
+            android:layout_height="35dp"
+            android:layout_marginRight="30dp"
+            android:id="@+id/txtMoTaChiTiet"
+            android:layout_weight="2"
+            android:layout_width="0dp"
+         />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/imageCamera"
+            android:layout_marginRight="70dp"
+            android:src="@drawable/camera_2985659"
+            android:layout_width="50dp"
+            android:layout_height="50dp">
+        </ImageView>
+        <ImageView
+            android:id="@+id/imageAlbum"
+            android:src="@drawable/image1"
+            android:layout_width="50dp"
+            android:layout_height="50dp">
+        </ImageView>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginTop="30dp"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/ThemMonAn"
+            android:backgroundTint="#4BAE4F"
+            android:layout_marginRight="30sp"
+            android:text="Lưu thông tin"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"/>
+        <Button
+            android:id="@+id/HuyBo"
+            android:backgroundTint="#F34336"
+            android:text="Hủy bỏ"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+</LinearLayout>

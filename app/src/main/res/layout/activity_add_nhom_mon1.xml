@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:background="#ffff"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Views.DanhMuc.add_nhom_mon1">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarAddNhomMon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#039BE5"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:titleTextColor="@color/white" />
+    <ImageView
+        android:src="@drawable/add_mon_an"
+        android:layout_gravity="center"
+        android:layout_marginTop="20sp"
+        android:id="@+id/imageNhomMon"
+        android:layout_width="70dp"
+        android:layout_height="70dp"/>
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:text="Tên nhóm món"
+            android:layout_height="wrap_content"/>
+        <EditText
+            android:layout_marginRight="30dp"
+            android:id="@+id/txtTenNhomMon"
+            android:layout_weight="2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/imageCamera"
+            android:layout_marginRight="70dp"
+            android:src="@drawable/camera_2985659"
+            android:layout_width="50dp"
+            android:layout_height="50dp">
+        </ImageView>
+        <ImageView
+            android:id="@+id/imageAlbum"
+            android:src="@drawable/image1"
+            android:layout_width="50dp"
+            android:layout_height="50dp">
+        </ImageView>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginTop="30dp"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/buttonThemNhomMon"
+            android:backgroundTint="#4BAE4F"
+            android:layout_marginRight="30sp"
+            android:text="Thêm nhóm món"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"/>
+        <Button
+            android:id="@+id/HuyBoNhomMon"
+            android:backgroundTint="#F34336"
+            android:text="Hủy bỏ"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+</LinearLayout>
