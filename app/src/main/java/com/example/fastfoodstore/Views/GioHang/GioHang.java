@@ -4,6 +4,7 @@ import android.content.Context;
 import android.graphics.Color;
 import android.os.Bundle;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
@@ -14,6 +15,9 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -36,6 +40,8 @@ public class GioHang extends Fragment {
     RecyclerView recyclerView;
     RecycleViewGioHang recycleViewGioHang;
     TextView tvTongTien;
+    ImageView imageView;
+     boolean trangthai = false;
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -44,7 +50,6 @@ public class GioHang extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
-
     public GioHang() {
         // Required empty public constructor
     }
@@ -57,7 +62,7 @@ public class GioHang extends Fragment {
      * @param param2 Parameter 2.
      * @return A new instance of fragment GioHang.
      */
-    // TODO: Rename and change types and number of parameters
+
     public static GioHang newInstance(String param1, String param2) {
         GioHang fragment = new GioHang();
         Bundle args = new Bundle();
@@ -66,6 +71,7 @@ public class GioHang extends Fragment {
         fragment.setArguments(args);
         return fragment;
     }
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -74,6 +80,7 @@ public class GioHang extends Fragment {
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
     }
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -86,6 +93,35 @@ public class GioHang extends Fragment {
         toolbar.setTitleTextColor(Color.WHITE);
         recyclerView = view.findViewById(R.id.recycleViewGioHang);
         tvTongTien = view.findViewById(R.id.tvTongTien);
+        imageView = view.findViewById(R.id.chietKhau);
+
+
+        imageView = view.findViewById(R.id.chietKhau);
+        imageView.setOnClickListener(v -> {
+            AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(getContext());
+            LayoutInflater inflater1 = getLayoutInflater();
+            View dialogView = inflater1.inflate(R.layout.chietkhau, null);
+            dialogBuilder.setView(dialogView);
+            dialogBuilder.setCancelable(false);
+            AlertDialog dialog = dialogBuilder.create();
+            Button huy = dialogView.findViewById(R.id.HuyBo);
+            TextView status = dialogView.findViewById(R.id.status);
+            Switch switchChietKhau = dialogView.findViewById(R.id.switchChietKhau);
+            switchChietKhau.setOnCheckedChangeListener(((buttonView, isChecked) -> {
+                if(switchChietKhau.isChecked() == true){
+                    status.setText("Phần trăm");
+                    trangthai = true;
+                }
+                else{
+                    status.setText("Số tiền");
+                }
+            }));
+            huy.setOnClickListener(view1 -> {
+                dialog.dismiss();
+            });
+            dialog.show();
+        });
+        
         double getTongTien = TongTien();
         tvTongTien.setText(" "+getTongTien);
         TextView buttonThanhToan = view.findViewById(R.id.tvButtonThanhToan);

@@ -69,7 +69,7 @@ public class MySqliteDBDanhMuc extends SQLiteOpenHelper {
                 COLUMN_MONAN_PRICE + " REAL NOT NULL, " +
                 COLUMN_MONAN_IMAGE + " BLOB, " +
                 COLUMN_MONAN_DANHMUC_ID + " INTEGER NOT NULL, " +
-                "tenDanhMuc TEXT, " +  // Thêm cột lưu tên nhóm món
+                "tenDanhMuc TEXT, " +  
                 COLUMN_MONAN_SOLUONG + " INTEGER DEFAULT 1, " +
                 "FOREIGN KEY(" + COLUMN_MONAN_DANHMUC_ID + ") REFERENCES " +
                 TABLE_DANHMUC + "(" + COLUMN_DANHMUC_ID + ") ON DELETE CASCADE)";

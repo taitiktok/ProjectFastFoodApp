@@ -31,6 +31,7 @@ public class MySqliteDBDoanhThu extends SQLiteOpenHelper {
                 "tongTien REAL," +
                 "idDanhMuc INTEGER," +
                 "tenDanhMuc TEXT)");
+
     }
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
@@ -44,6 +45,8 @@ public class MySqliteDBDoanhThu extends SQLiteOpenHelper {
                     "tongTien REAL," +
                     "idDanhMuc INTEGER," +
                     "tenDanhMuc TEXT)");
+            db.execSQL("CREATE TABLE IF NOT EXISTS DonHang ( "
+            );
         }
     }
     public void themVaoDoanhThu(DoanhThu monAn) {

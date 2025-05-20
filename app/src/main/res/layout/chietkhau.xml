@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="#ffff"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+  <TextView
+      android:textSize="20dp"
+      android:background="#FDD835"
+      android:gravity="center"
+      android:text="Chiết khấu thanh toán "
+      android:layout_width="match_parent"
+      android:layout_height="40dp"/>
+    <LinearLayout
+        android:layout_marginTop="25dp"
+       android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/status"
+            android:textSize="15dp"
+            android:layout_marginRight="50dp"
+            android:text="Phần trăm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <EditText
+            android:layout_marginRight="25dp"
+            android:background="#51C0CA33"
+            android:id="@+id/txtChietKhau"
+            android:layout_width="150dp"
+            android:layout_height="40dp"/>
+        <Switch
+            android:id="@+id/switchChietKhau"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+    <LinearLayout
+        android:paddingBottom="25dp"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/ApDung"
+            android:backgroundTint="#216224"
+            android:layout_marginRight="40dp"
+            android:text="Áp dụng"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <Button
+            android:id="@+id/HuyBo"
+            android:backgroundTint="#C32E2E"
+            android:text="Hủy bỏ"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+</LinearLayout>
