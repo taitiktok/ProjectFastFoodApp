@@ -13,7 +13,7 @@
         android:id="@+id/imageInGioHang"
         android:layout_width="70dp"
         android:layout_height="70dp"
-        android:src="@drawable/image1"
+        android:src="@drawable/chicken_14449982"
         app:civ_border_width="2dp"
         android:layout_marginLeft="20sp"
         app:civ_border_color="#A6E53935"/>

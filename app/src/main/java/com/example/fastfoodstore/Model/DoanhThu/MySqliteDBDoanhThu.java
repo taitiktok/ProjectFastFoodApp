@@ -20,6 +20,7 @@ public class MySqliteDBDoanhThu extends SQLiteOpenHelper {
     public MySqliteDBDoanhThu(@Nullable Context context) {
         super(context,"NewDOANHTHU.db", null,3);
     }
+
     @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL("CREATE TABLE IF NOT EXISTS DoanhThu (" +
@@ -33,6 +34,7 @@ public class MySqliteDBDoanhThu extends SQLiteOpenHelper {
                 "tenDanhMuc TEXT)");
 
     }
+
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         if (oldVersion < 3) {
@@ -49,6 +51,7 @@ public class MySqliteDBDoanhThu extends SQLiteOpenHelper {
             );
         }
     }
+
     public void themVaoDoanhThu(DoanhThu monAn) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
@@ -62,6 +65,7 @@ public class MySqliteDBDoanhThu extends SQLiteOpenHelper {
         db.insert("DoanhThu", null, values);
         db.close();
     }
+
     public void themVaoDoanhThuTheoThang(DoanhThu monAn) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
@@ -75,30 +79,31 @@ public class MySqliteDBDoanhThu extends SQLiteOpenHelper {
         db.insert("DoanhThuTheoThang", null, values);
         db.close();
     }
+
     public void clearDoanhThuTheoCaLamViec(){
         SQLiteDatabase db = this.getWritableDatabase();
         db.execSQL("DELETE FROM DoanhThu WHERE  id > 0");
         db.close();
     }
-    public ArrayList<DoanhThu> getThongKeDoanhThuTheoDanhMuc() {
-        ArrayList<DoanhThu> list = new ArrayList<>();
-        SQLiteDatabase db = getReadableDatabase();
-        String sql = "SELECT dm.tenDanhMuc, SUM(ct.soLuong) AS tongSoLuong, SUM(ct.thanhTien) AS tongTien " +
-                "FROM ChiTietDonHang ct " +
-                "JOIN MonAn m ON ct.maMon = m.maMon " +
-                "JOIN DanhMuc dm ON m.maDanhMuc = dm.maDanhMuc " +
-                "GROUP BY dm.maDanhMuc";
-        Cursor cursor = db.rawQuery(sql, null);
-        int stt = 1;
-        while (cursor.moveToNext()) {
-            String tenDanhMuc = cursor.getString(cursor.getColumnIndexOrThrow("tenDanhMuc"));
-            int soLuong = cursor.getInt(cursor.getColumnIndexOrThrow("tongSoLuong"));
-            double tongTien = cursor.getDouble(cursor.getColumnIndexOrThrow("tongTien"));
-            list.add(new DoanhThu(stt++, tenDanhMuc, soLuong, tongTien));
-        }
-        cursor.close();
-        return list;
-    }
+//    public ArrayList<DoanhThu> getThongKeDoanhThuTheoDanhMuc() {
+//        ArrayList<DoanhThu> list = new ArrayList<>();
+//        SQLiteDatabase db = getReadableDatabase();
+//        String sql = "SELECT dm.tenDanhMuc, SUM(ct.soLuong) AS tongSoLuong, SUM(ct.thanhTien) AS tongTien " +
+//                "FROM DoanhThu ct " +
+//                "JOIN MonAn m ON ct.maMon = m.maMon " +
+//                "JOIN DanhMuc dm ON m.maDanhMuc = dm.maDanhMuc " +
+//                "GROUP BY dm.maDanhMuc";
+//        Cursor cursor = db.rawQuery(sql, null);
+//        int stt = 1;
+//        while (cursor.moveToNext()) {
+//            String tenDanhMuc = cursor.getString(cursor.getColumnIndexOrThrow("tenDanhMuc"));
+//            int soLuong = cursor.getInt(cursor.getColumnIndexOrThrow("tongSoLuong"));
+//            double tongTien = cursor.getDouble(cursor.getColumnIndexOrThrow("tongTien"));
+//            list.add(new DoanhThu(stt++, tenDanhMuc, soLuong, tongTien));
+//        }
+//        cursor.close();
+//        return list;
+//    }
 
     public ArrayList<DoanhThu> getThongKeDoanhThuTheoMaNhomMon() {
         ArrayList<DoanhThu> list = new ArrayList<>();
@@ -107,7 +112,7 @@ public class MySqliteDBDoanhThu extends SQLiteOpenHelper {
         String query = "SELECT idDanhMuc, tenDanhMuc, " +
                 "SUM(soLuong) as tongSoLuong, " +
                 "SUM(tongTien) as tongTien " +
-                "FROM DoanhThu " +
+                "FROM DoanhThuTheoThang " +
                 "GROUP BY idDanhMuc, tenDanhMuc";
 
         Cursor cursor = db.rawQuery(query, null);

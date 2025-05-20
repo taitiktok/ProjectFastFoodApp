@@ -28,15 +28,12 @@ android:layout_height="480dp"
 android:layout_margin="20dp"
 app:cardCornerRadius="15dp"
 app:cardElevation="6dp">
-
 <LinearLayout
     android:background="#FFFFFF"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="500dp"
     android:padding="15dp">
-
-    <!-- Tiêu đề -->
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -47,8 +44,6 @@ app:cardElevation="6dp">
         android:textColor="#00776B"
         android:textSize="30sp"
         android:textStyle="bold" />
-
-
     <EditText
         android:textColor="@color/black"
         android:id="@+id/txtUserName"
@@ -63,7 +58,6 @@ app:cardElevation="6dp">
         android:paddingStart="20dp"
         android:paddingEnd="10dp" />
 
-    <!-- Password -->
     <EditText
         android:textColor="@color/black"
         android:id="@+id/txtPassWord"
@@ -78,7 +72,6 @@ app:cardElevation="6dp">
         android:paddingStart="20dp"
         android:paddingEnd="10dp" />
 
-    <!-- Quên mật khẩu -->
     <TextView
         android:layout_marginRight="9sp"
         android:layout_width="wrap_content"

@@ -15,17 +15,83 @@
         android:id="@+id/toolbarDoanhThu"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
-    <TextView
-        android:textStyle="bold"
-        android:layout_marginLeft="15dp"
-        android:textColor="@color/design_default_color_primary"
-        android:layout_marginTop="20dp"
-        android:text="Biểu đồ tròn thông kê doanh thu theo nhóm món "
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
     <com.github.mikephil.charting.charts.PieChart
         android:layout_margin="30dp"
         android:id="@+id/chart"
         android:layout_width="match_parent"
-        android:layout_height="500dp"/>
+        android:layout_height="310dp"/>
+    <LinearLayout
+
+        android:padding="8dp"
+        android:background="@color/green"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:textAlignment="center"
+            android:text="STT"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:textAlignment="center"
+            android:text="Tên nhóm món"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:textAlignment="center"
+            android:text="Doanh thu"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/simple1"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"/>
+   <LinearLayout
+       android:layout_marginRight="20dp"
+       android:gravity="right"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content">
+       <TextView
+           android:layout_marginRight="5dp"
+           android:textColor="@color/nav_selected"
+           android:text="Tổng doanh thu :"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"/>
+       <TextView
+           android:id="@+id/TongDoanhThuInBieuDo"
+           android:layout_marginRight="5dp"
+           android:textColor="@color/design_default_color_error"
+           android:text="10000000"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"/>
+       <TextView
+           android:textColor="@color/design_default_color_error"
+           android:text="VND"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"/>
+   </LinearLayout>
+    <LinearLayout
+        android:layout_marginTop="15dp"
+        android:id="@+id/LogOut"
+        android:padding="9dp"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:background="@drawable/bgr_logout"
+        android:orientation="horizontal"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/ButtonChotDoanhThu"
+            android:layout_marginRight="10dp"
+            android:text="Chốt doanh thu "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <ImageView
+            android:src="@drawable/baseline_login_24"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
 </LinearLayout>

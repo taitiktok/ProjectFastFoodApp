@@ -125,7 +125,7 @@
                             xmlns:app="http://schemas.android.com/apk/res-auto"
                             android:layout_width="70dp"
                             android:layout_height="70dp"
-                            android:src="@drawable/image1"
+                            android:src="@drawable/chicken_14449982"
                             app:civ_border_width="2dp"
                             app:civ_border_color="#388338"/>
                         <TextView

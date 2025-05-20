@@ -106,20 +106,20 @@ public class GioHang extends Fragment {
             AlertDialog dialog = dialogBuilder.create();
             Button huy = dialogView.findViewById(R.id.HuyBo);
             TextView status = dialogView.findViewById(R.id.status);
-            Switch switchChietKhau = dialogView.findViewById(R.id.switchChietKhau);
-            switchChietKhau.setOnCheckedChangeListener(((buttonView, isChecked) -> {
-                if(switchChietKhau.isChecked() == true){
-                    status.setText("Phần trăm");
-                    trangthai = true;
-                }
-                else{
-                    status.setText("Số tiền");
-                }
-            }));
-            huy.setOnClickListener(view1 -> {
-                dialog.dismiss();
-            });
-            dialog.show();
+//            Switch switchChietKhau = dialogView.findViewById(R.id.switchChietKhau);
+//            switchChietKhau.setOnCheckedChangeListener(((buttonView, isChecked) -> {
+//                if(switchChietKhau.isChecked() == true){
+//                    status.setText("Phần trăm");
+//                    trangthai = true;
+//                }
+//                else{
+//                    status.setText("Số tiền");
+//                }
+//            }));
+//            huy.setOnClickListener(view1 -> {
+//                dialog.dismiss();
+//            });
+//            dialog.show();
         });
         
         double getTongTien = TongTien();

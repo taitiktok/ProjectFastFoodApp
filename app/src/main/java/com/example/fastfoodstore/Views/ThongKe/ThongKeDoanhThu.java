@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.fastfoodstore.R;
 import com.github.mikephil.charting.charts.BarChart;
@@ -36,6 +37,7 @@ public class ThongKeDoanhThu extends AppCompatActivity {
             return insets;
         });
         BarChart barChart = findViewById(R.id.chart);
+
         barChart.getAxisRight().setDrawLabels(false);
 
         ArrayList<BarEntry> entries = new ArrayList<>();
